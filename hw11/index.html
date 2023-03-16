@@ -102,9 +102,67 @@
       color: cyan; 
       text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
   }
+
+  .github-corner:hover 
+  .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+  }
+  @keyframes octocat-wave {
+    0%,100% {
+      transform:rotate(0)
+    }
+    20%,60% {
+      transform:rotate(-25deg)
+    }
+    40%,80% {
+      transform:rotate(10deg)
+    }
+  }
+  @media (max-width:500px) {
+    .github-corner:hover 
+    .octo-arm {
+      animation:none
+    }
+
+    .github-corner 
+    .octo-arm {
+      animation: octocat-wave 560ms ease-in-out
+    }
+  }
+
+  /* 波浪 */
+  a {
+    color:yellow;
+    text-decoration: none; 
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cpath fill='none' stroke='%23fff' d='M0 3.5c5 0 5-3 10-3s5 3 10 3 5-3 10-3 5 3 10 3'/%3E%3C/svg%3E") repeat-x 0 100%; 
+    background-size:20px auto; 
+    animation: waveMove 1s infinite linear;
+  }
+
+  a:hover {
+    color:#f30;
+    text-decoration: none;
+    background: none;
+    animation: none;
+    text-decoration: underline;
+    padding:2px 0;
+  }
+  @keyframes waveMove {
+    from { background-position:0 100%; }
+    to { background-position:20px 100%; }
+  }
+  /* 波浪 */
 </style>
 </head>
 <body>
+<!-- https://alexlenail.me/NN-SVG/about.html -->
+<a href="https://github.com/你的帳號/ct2023s/" class="github-corner" aria-label="View source on Github">
+  <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#f9eced; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+    <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="#f9eced" stroke="#6A4C9C" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+    <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="#f9eced" stroke="#6A4C9C" class="octo-body"></path>
+  </svg>
+</a>
 
 <div class="container-fluid">
 
@@ -112,6 +170,20 @@
   <div class="row hw12">
     <div class="col-md-12 twenty">
       <h1>作業 11</h1>
+    </div>
+  </div>
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      題目: 完成 <a href="https://method.ac/">Method of Action</a> 五項遊戲，過關後，將成績分數截圖，過關標準見下方<u>自我評分表</u>。並請記得更新<u>自我評分表</u>。
+      <li><a href="https://boolean.method.ac/">The Boolean Game</a></li>
+      <li><a href="https://bezier.method.ac/">The Bézier Game</a></li>
+      <li><a href="https://color.method.ac/">Color Game</a></li>
+      <li><a href="https://shape.method.ac/">Shape Type</a></li>
+      <li><a href="https://type.method.ac/">Kern Type</a></li>
+      <hr>
+      通關秘笈: <a href="https://www.youtube.com/watch?v=a55tOCUy9oI&list=PLt3hKwTVbgyILYx3lzx6zuI27dgQKSKk-">Bezier Game</a>
     </div>
   </div>
 
@@ -141,19 +213,29 @@
         </tr>
         <tr>
           <td rowspan="7" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>2</td>
-          <td>Simple baseline - 下載 CubismWebSamples</td>
+          <td>完成 Boolean Game (通過標準: 各大關卡，至少通過一個小關卡)</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
-          <td id='m2'>6</td>
-          <td>Medium baseline - 編譯執行 </td>
+          <td id='m2'>2</td>
+          <td>完成 Bézier Game (通過標準: more than 3 nodes to spare)</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>2</td>
-          <td>Strong baseline - 更換 Cubism 人物模型、發佈網頁 </td>
+          <td>完成 Color Game (通過標準: 6.7分以上)</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
+          <td id='m4'>2</td>
+          <td>完成 Shape Type (通過標準: 68分以上)</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox5"></td>
+          <td id='m5'>2</td>
+          <td>完成 Kern Type (通過標準: 75分以上)</td>
         </tr>
       </table>
     </div>
@@ -161,14 +243,36 @@
 
   <!-- ------------------------------------------------>
   <div class="row hw12">
-    <div class="col-md-12 twenty">
+    <div class="col-md-4 twenty">
+      <a href="./boolean.png"> <img src="./boolean.png" width="100%" /></a>
+    </div>
+    <div class="col-md-4 twenty">
+      <!--
       <video id="video1" style="width:100%;max-width:100%;" controls="">
         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
       </video>
+      -->
+      <img src="./bezier.png" width="100%" />
+    </div>
+    <div class="col-md-4 twenty">
+      <img src="./color.png" width="100%" />
     </div>
   </div>
 
   <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-4 twenty">
+      <img src="./shape.png" width="100%" />
+    </div>
+    <div class="col-md-4 twenty">
+      <img src="./kern.png" width="100%" />
+    </div>
+    <div class="col-md-4 twenty">
+      <!-- 無 -->
+    </div>
+  </div>
+
+
 
   <!-- ------------------------------------------------>
 
@@ -186,8 +290,6 @@
   d3.select("#myCheckbox3").on("change",update);
   d3.select("#myCheckbox4").on("change",update);
   d3.select("#myCheckbox5").on("change",update);
-  d3.select("#myCheckbox6").on("change",update);
-  d3.select("#myCheckbox7").on("change",update);
 
   update();
   
@@ -206,6 +308,16 @@
     if (d3.select("#myCheckbox3").property("checked")){
       score += parseInt(d3.select('#m3').html());   
     }
+
+    if (d3.select("#myCheckbox4").property("checked")){
+      score += parseInt(d3.select('#m4').html());   
+    }
+
+    if (d3.select("#myCheckbox5").property("checked")){
+      score += parseInt(d3.select('#m5').html());   
+    }
+
+
 
     d3.select("#myTotal").html(score);    
   }
